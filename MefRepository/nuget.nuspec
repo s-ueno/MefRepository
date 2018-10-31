@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MefRepository</id>
+    <version>1.0.0</version>
+    <title>MefRepository</title>
+    <authors>uEN</authors>
+    <licenseUrl>https://github.com/s-ueno/DomBehind/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/s-ueno/DomBehind</projectUrl>
+    <tags>DI .NETStandard</tags>
+    <description>
+      dependency injection with MEF
+    </description>
+    <releaseNotes>
+      ・
+    </releaseNotes>
+    <dependencies>
+      <dependency id="Microsoft.VisualStudio.Composition" version="15.8.98"></dependency>
+      <dependency id="System.Configuration.ConfigurationManager" version="4.5.0"></dependency>
+    </dependencies>
+  </metadata>
+</package>
