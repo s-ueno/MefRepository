@@ -69,16 +69,6 @@ namespace MefRepository
             }
             return type;
         }
-        //static ConventionBuilder GetConventions()
-        //{
-        //    var conventionBuilder = new ConventionBuilder();
-
-        //    conventionBuilder
-        //        .ForTypesDerivedFrom<IPriorityMetadata>()
-        //        .Export<IPriorityMetadata>();
-
-        //    return conventionBuilder;
-        //}
 
         /// <summary>
         /// Get instance with most priority
@@ -93,6 +83,37 @@ namespace MefRepository
                 return mostPriority.CreateExport().Value;
 
             return default(T);
+        }
+
+        /// <summary>
+        /// Retrieve service via default transparent proxy
+        /// </summary>
+        /// <remarks>
+        /// <seealso cref="ActionProxy"/>
+        /// </remarks>
+        public static T GetTransparentProxy<T>() 
+        {
+            var proxy = ActionProxy.Create<T, ActionProxy>();
+
+            (proxy as ActionProxy).Instance = GetInstance<T>();
+
+            return proxy;
+        }
+
+        /// <summary>
+        /// Retrieve service via arbitrary transparent proxy
+        /// </summary>
+        /// <remarks>
+        /// <seealso cref="ActionProxy"/>
+        /// </remarks>
+        public static T GetTransparentProxy<T, TProxy>() 
+            where TProxy : ActionProxy
+        {
+            var proxy = ActionProxy.Create<T, TProxy>();
+
+            (proxy as ActionProxy).Instance = GetInstance<T>();
+
+            return proxy;
         }
 
         public static T GetByContext<T>(string context)

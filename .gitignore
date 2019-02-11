@@ -21,3 +21,22 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+/.vs/MefRepository
+/Default/bin
+/Default/obj
+/DotnetCore/bin
+/DotnetCore/obj
+/DotnetFull/bin
+/DotnetFull/obj
+/Ext/bin/Debug/netstandard2.0
+/Ext/obj
+/Impl/bin
+/Impl/obj
+/MefRepository/bin
+/MefRepository/obj
+/MefRepository.DispatchProxy/obj
+/MefRepository.Dotnet/obj/Debug
+/MefRepository.DotnetStandard/obj
+/MefRepository.RealProxy/obj/Debug
+/packages
+/_packages

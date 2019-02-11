@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Impl
+﻿namespace Impl
 {
-    public interface ISayHello
+    public interface ISayHello 
     {
         string Do();
     }
